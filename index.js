@@ -322,6 +322,9 @@ module.exports = function(gMapsApi) {
    */
   MarkerLabel_.prototype.onRemove = function () {
     var i;
+
+    if (!this.labelDiv_.parentNode) return;
+
     this.labelDiv_.parentNode.removeChild(this.labelDiv_);
     this.eventDiv_.parentNode.removeChild(this.eventDiv_);
 
